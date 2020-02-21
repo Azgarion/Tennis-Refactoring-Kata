@@ -41,9 +41,6 @@ namespace Tennis.Domain
                     else { score += "-"; tempScore = Player2.Score; }
                     switch (tempScore)
                     {
-                        case 0:
-                            score += "Love";
-                            break;
                         case 1:
                             score += "Fifteen";
                             break;

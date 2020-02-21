@@ -15,7 +15,10 @@ namespace Tennis.Domain
             new LoveAll(),
             new FifteenAll(),
             new ThirtyAll(),
-            new Deuce()
+            new Deuce(),
+            new FifteenLove(), new LoveFifteen(), 
+            new ThirtyLove(), new LoveThirty(), 
+            new FortyLove(), new LoveForty()
         };
 
         internal TennisGameAbstract(string player1Name, string player2Name)

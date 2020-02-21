@@ -13,31 +13,6 @@ namespace Tennis.Domain
         protected override string ProcessScore()
         {
             var score = "";
-            if (Player1.Score > 0 && Player2.Score == 0)
-            {
-                if (Player1.Score == 1)
-                    _p1Res = "Fifteen";
-                if (Player1.Score == 2)
-                    _p1Res = "Thirty";
-                if (Player1.Score == 3)
-                    _p1Res = "Forty";
-
-                _p2Res = "Love";
-                score = _p1Res + "-" + _p2Res;
-            }
-            if (Player2.Score > 0 && Player1.Score == 0)
-            {
-                if (Player2.Score == 1)
-                    _p2Res = "Fifteen";
-                if (Player2.Score == 2)
-                    _p2Res = "Thirty";
-                if (Player2.Score == 3)
-                    _p2Res = "Forty";
-
-                _p1Res = "Love";
-                score = _p1Res + "-" + _p2Res;
-            }
-
             if (Player1.Score > Player2.Score && Player1.Score < 4)
             {
                 if (Player1.Score == 2)

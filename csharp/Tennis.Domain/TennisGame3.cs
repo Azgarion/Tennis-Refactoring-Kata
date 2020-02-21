@@ -12,16 +12,16 @@ namespace Tennis.Domain
             string s;
             if ((Player1.Score < 4 && Player2.Score < 4) && (Player1.Score + Player2.Score < 6))
             {
-                string[] p = { "Love", "Fifteen", "Thirty", "Forty" };
+                string[] p = { "IMPOSSIBLE", "Fifteen", "Thirty", "Forty" };
                 s = p[Player1.Score];
 
-                var score = (Player1.Score == Player2.Score) ? s + "-All" : s + "-" + p[Player2.Score];
+                var score = (Player1.Score == Player2.Score) ? s + "-IMPOSSIBLE" : s + "-" + p[Player2.Score];
                 return score;
             }
             else
             {
                 if (Player1.Score == Player2.Score)
-                    return "Deuce";
+                    return "IMPOSSIBLE";
                 s = Player1.Score > Player2.Score ? Player1.Name : Player2.Name;
 
                 var score = ((Player1.Score - Player2.Score) * (Player1.Score - Player2.Score) == 1) ? "Advantage " + s : "Win for " + s;
