@@ -15,84 +15,84 @@ namespace Tennis.Domain
         public override string GetScore()
         {
             var score = "";
-            if (Player1Score == Player2Score && Player1Score < 3)
+            if (Player1.Score == Player2.Score && Player1.Score < 3)
             {
-                if (Player1Score == 0)
+                if (Player1.Score == 0)
                     score = "Love";
-                if (Player1Score == 1)
+                if (Player1.Score == 1)
                     score = "Fifteen";
-                if (Player1Score == 2)
+                if (Player1.Score == 2)
                     score = "Thirty";
                 score += "-All";
             }
-            if (Player1Score == Player2Score && Player1Score > 2)
+            if (Player1.Score == Player2.Score && Player1.Score > 2)
                 score = "Deuce";
 
-            if (Player1Score > 0 && Player2Score == 0)
+            if (Player1.Score > 0 && Player2.Score == 0)
             {
-                if (Player1Score == 1)
+                if (Player1.Score == 1)
                     _p1Res = "Fifteen";
-                if (Player1Score == 2)
+                if (Player1.Score == 2)
                     _p1Res = "Thirty";
-                if (Player1Score == 3)
+                if (Player1.Score == 3)
                     _p1Res = "Forty";
 
                 _p2Res = "Love";
                 score = _p1Res + "-" + _p2Res;
             }
-            if (Player2Score > 0 && Player1Score == 0)
+            if (Player2.Score > 0 && Player1.Score == 0)
             {
-                if (Player2Score == 1)
+                if (Player2.Score == 1)
                     _p2Res = "Fifteen";
-                if (Player2Score == 2)
+                if (Player2.Score == 2)
                     _p2Res = "Thirty";
-                if (Player2Score == 3)
+                if (Player2.Score == 3)
                     _p2Res = "Forty";
 
                 _p1Res = "Love";
                 score = _p1Res + "-" + _p2Res;
             }
 
-            if (Player1Score > Player2Score && Player1Score < 4)
+            if (Player1.Score > Player2.Score && Player1.Score < 4)
             {
-                if (Player1Score == 2)
+                if (Player1.Score == 2)
                     _p1Res = "Thirty";
-                if (Player1Score == 3)
+                if (Player1.Score == 3)
                     _p1Res = "Forty";
-                if (Player2Score == 1)
+                if (Player2.Score == 1)
                     _p2Res = "Fifteen";
-                if (Player2Score == 2)
+                if (Player2.Score == 2)
                     _p2Res = "Thirty";
                 score = _p1Res + "-" + _p2Res;
             }
-            if (Player2Score > Player1Score && Player2Score < 4)
+            if (Player2.Score > Player1.Score && Player2.Score < 4)
             {
-                if (Player2Score == 2)
+                if (Player2.Score == 2)
                     _p2Res = "Thirty";
-                if (Player2Score == 3)
+                if (Player2.Score == 3)
                     _p2Res = "Forty";
-                if (Player1Score == 1)
+                if (Player1.Score == 1)
                     _p1Res = "Fifteen";
-                if (Player1Score == 2)
+                if (Player1.Score == 2)
                     _p1Res = "Thirty";
                 score = _p1Res + "-" + _p2Res;
             }
 
-            if (Player1Score > Player2Score && Player2Score >= 3)
+            if (Player1.Score > Player2.Score && Player2.Score >= 3)
             {
                 score = "Advantage player1";
             }
 
-            if (Player2Score > Player1Score && Player1Score >= 3)
+            if (Player2.Score > Player1.Score && Player1.Score >= 3)
             {
                 score = "Advantage player2";
             }
 
-            if (Player1Score >= 4 && Player2Score >= 0 && (Player1Score - Player2Score) >= 2)
+            if (Player1.Score >= 4 && Player2.Score >= 0 && (Player1.Score - Player2.Score) >= 2)
             {
                 score = "Win for player1";
             }
-            if (Player2Score >= 4 && Player1Score >= 0 && (Player2Score - Player1Score) >= 2)
+            if (Player2.Score >= 4 && Player1.Score >= 0 && (Player2.Score - Player1.Score) >= 2)
             {
                 score = "Win for player2";
             }

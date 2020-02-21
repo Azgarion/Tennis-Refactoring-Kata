@@ -12,9 +12,9 @@ namespace Tennis.Domain
         public override string GetScore()
         {
             var score = "";
-            if (Player1Score == Player2Score)
+            if (Player1.Score == Player2.Score)
             {
-                score = Player1Score switch
+                score = Player1.Score switch
                 {
                     0 => "Love-All",
                     1 => "Fifteen-All",
@@ -22,9 +22,9 @@ namespace Tennis.Domain
                     _ => "Deuce"
                 };
             }
-            else if (Player1Score >= 4 || Player2Score >= 4)
+            else if (Player1.Score >= 4 || Player2.Score >= 4)
             {
-                var minusResult = Player1Score - Player2Score;
+                var minusResult = Player1.Score - Player2.Score;
 
                 switch (minusResult)
                 {
@@ -48,8 +48,8 @@ namespace Tennis.Domain
                 for (var i = 1; i < 3; i++)
                 {
                     int tempScore;
-                    if (i == 1) tempScore = Player1Score;
-                    else { score += "-"; tempScore = Player2Score; }
+                    if (i == 1) tempScore = Player1.Score;
+                    else { score += "-"; tempScore = Player2.Score; }
                     switch (tempScore)
                     {
                         case 0:

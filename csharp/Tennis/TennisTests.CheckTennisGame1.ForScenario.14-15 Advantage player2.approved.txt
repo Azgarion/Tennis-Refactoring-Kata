@@ -1,33 +1,33 @@
 ﻿New TennisGame1
 Player1Name equals player1
 Player2Name equals player2
-Player1Score incremented
-Player2Score incremented
-Player1Score incremented
-Player2Score incremented
-Player1Score incremented
-Player2Score incremented
-Player1Score incremented
-Player2Score incremented
-Player1Score incremented
-Player2Score incremented
-Player1Score incremented
-Player2Score incremented
-Player1Score incremented
-Player2Score incremented
-Player1Score incremented
-Player2Score incremented
-Player1Score incremented
-Player2Score incremented
-Player1Score incremented
-Player2Score incremented
-Player1Score incremented
-Player2Score incremented
-Player1Score incremented
-Player2Score incremented
-Player1Score incremented
-Player2Score incremented
-Player1Score incremented
-Player2Score incremented
-Player2Score incremented
+Player player1 score incremented to 1
+Player player2 score incremented to 1
+Player player1 score incremented to 2
+Player player2 score incremented to 2
+Player player1 score incremented to 3
+Player player2 score incremented to 3
+Player player1 score incremented to 4
+Player player2 score incremented to 4
+Player player1 score incremented to 5
+Player player2 score incremented to 5
+Player player1 score incremented to 6
+Player player2 score incremented to 6
+Player player1 score incremented to 7
+Player player2 score incremented to 7
+Player player1 score incremented to 8
+Player player2 score incremented to 8
+Player player1 score incremented to 9
+Player player2 score incremented to 9
+Player player1 score incremented to 10
+Player player2 score incremented to 10
+Player player1 score incremented to 11
+Player player2 score incremented to 11
+Player player1 score incremented to 12
+Player player2 score incremented to 12
+Player player1 score incremented to 13
+Player player2 score incremented to 13
+Player player1 score incremented to 14
+Player player2 score incremented to 14
+Player player2 score incremented to 15
 GetScore returned Advantage player2

@@ -4,35 +4,26 @@ namespace Tennis.Domain
 {
     public abstract class TennisGameAbstract : ITennisGame
     {
-        protected readonly string Player1Name;
-        protected readonly string Player2Name;
-
-        protected int Player1Score { get; private set; }
-        protected int Player2Score { get; private set; }
+        protected Player Player1 { get; }
+        protected Player Player2 { get; }
 
         internal TennisGameAbstract(string player1Name, string player2Name)
         {
             Console.WriteLine($"New {GetType().Name}");
 
-            Player1Name = player1Name;
-            Console.WriteLine($"{nameof(Player1Name)} equals {Player1Name}");
+            Player1 = new Player(player1Name);
+            Console.WriteLine($"Player1Name equals {Player1.Name}");
 
-            Player2Name = player2Name;
-            Console.WriteLine($"{nameof(Player2Name)} equals {Player2Name}");
+            Player2 = new Player(player2Name);
+            Console.WriteLine($"Player2Name equals {Player2.Name}");
         }
 
         public void WonPoint(string playerName)
         {
-            if (playerName == "player1")
-            {
-                Player1Score += 1;
-                Console.WriteLine(nameof(Player1Score) + " incremented");
-            }
-            else
-            {
-                Player2Score += 1;
-                Console.WriteLine(nameof(Player2Score) + " incremented");
-            }
+            if (playerName == "player1") 
+                Player1.WinPoint();
+            else 
+                Player2.WinPoint();
         }
         public abstract string GetScore();
     }

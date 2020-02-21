@@ -1,8 +1,8 @@
 ﻿New TennisGame1
 Player1Name equals player1
 Player2Name equals player2
-Player1Score incremented
-Player2Score incremented
-Player2Score incremented
-Player2Score incremented
+Player player1 score incremented to 1
+Player player2 score incremented to 1
+Player player2 score incremented to 2
+Player player2 score incremented to 3
 GetScore returned Fifteen-Forty

@@ -1,5 +1,5 @@
 ﻿New TennisGame3
 Player1Name equals player1
 Player2Name equals player2
-Player1Score incremented
+Player player1 score incremented to 1
 GetScore returned Fifteen-Love

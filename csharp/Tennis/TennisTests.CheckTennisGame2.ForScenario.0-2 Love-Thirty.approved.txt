@@ -1,6 +1,6 @@
 ﻿New TennisGame2
 Player1Name equals player1
 Player2Name equals player2
-Player2Score incremented
-Player2Score incremented
+Player player2 score incremented to 1
+Player player2 score incremented to 2
 GetScore returned Love-Thirty

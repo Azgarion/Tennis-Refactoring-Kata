@@ -12,22 +12,22 @@ namespace Tennis.Domain
         public override string GetScore()
         {
             string s;
-            if ((Player1Score < 4 && Player2Score < 4) && (Player1Score + Player2Score < 6))
+            if ((Player1.Score < 4 && Player2.Score < 4) && (Player1.Score + Player2.Score < 6))
             {
                 string[] p = { "Love", "Fifteen", "Thirty", "Forty" };
-                s = p[Player1Score];
+                s = p[Player1.Score];
 
-                var score = (Player1Score == Player2Score) ? s + "-All" : s + "-" + p[Player2Score];
+                var score = (Player1.Score == Player2.Score) ? s + "-All" : s + "-" + p[Player2.Score];
                 Console.WriteLine(nameof(GetScore) + " returned " + score);
                 return score;
             }
             else
             {
-                if (Player1Score == Player2Score)
+                if (Player1.Score == Player2.Score)
                     return "Deuce";
-                s = Player1Score > Player2Score ? Player1Name : Player2Name;
+                s = Player1.Score > Player2.Score ? Player1.Name : Player2.Name;
 
-                var score = ((Player1Score - Player2Score) * (Player1Score - Player2Score) == 1) ? "Advantage " + s : "Win for " + s;
+                var score = ((Player1.Score - Player2.Score) * (Player1.Score - Player2.Score) == 1) ? "Advantage " + s : "Win for " + s;
                 Console.WriteLine(nameof(GetScore) + " returned " + score);
                 return score;
             }
