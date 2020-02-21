@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Tennis.Domain.Cases;
 
 namespace Tennis.Domain
 {
@@ -6,6 +9,11 @@ namespace Tennis.Domain
     {
         protected Player Player1 { get; }
         protected Player Player2 { get; }
+
+        private static readonly IEnumerable<IPossibleIssue> KnownIssues = new[]
+        {
+            new LoveAll()
+        };
 
         internal TennisGameAbstract(string player1Name, string player2Name)
         {
@@ -25,6 +33,20 @@ namespace Tennis.Domain
             else 
                 Player2.WinPoint();
         }
-        public abstract string GetScore();
+
+        private bool IssueMatches(IPossibleIssue possibleIssue)
+            => possibleIssue.Happens(Player1, Player2);
+
+        public string GetScore()
+        {
+            var score = KnownIssues
+                .FirstOrDefault(IssueMatches)?.Name 
+                ?? ProcessScore();
+
+            Console.WriteLine(nameof(GetScore) + " returned " + score);
+            return score;
+        }
+
+        protected abstract string ProcessScore();
     }
 }

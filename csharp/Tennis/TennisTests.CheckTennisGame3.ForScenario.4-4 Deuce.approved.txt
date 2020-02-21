@@ -9,3 +9,4 @@ Player player1 score incremented to 3
 Player player2 score incremented to 3
 Player player1 score incremented to 4
 Player player2 score incremented to 4
+GetScore returned Deuce

@@ -1,5 +1,3 @@
-using System;
-
 namespace Tennis.Domain
 {
     public class TennisGame1 : TennisGameAbstract
@@ -9,7 +7,7 @@ namespace Tennis.Domain
         {
         }
 
-        public override string GetScore()
+        protected override string ProcessScore()
         {
             var score = "";
             if (Player1.Score == Player2.Score)
@@ -68,7 +66,6 @@ namespace Tennis.Domain
                 }
             }
 
-            Console.WriteLine(nameof(GetScore) + " returned " + score);
             return score;
         }
     }

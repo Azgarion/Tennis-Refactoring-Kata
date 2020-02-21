@@ -1,5 +1,3 @@
-using System;
-
 namespace Tennis.Domain
 {
     public class TennisGame3 : TennisGameAbstract
@@ -9,7 +7,7 @@ namespace Tennis.Domain
         {
         }
 
-        public override string GetScore()
+        protected override string ProcessScore()
         {
             string s;
             if ((Player1.Score < 4 && Player2.Score < 4) && (Player1.Score + Player2.Score < 6))
@@ -18,7 +16,6 @@ namespace Tennis.Domain
                 s = p[Player1.Score];
 
                 var score = (Player1.Score == Player2.Score) ? s + "-All" : s + "-" + p[Player2.Score];
-                Console.WriteLine(nameof(GetScore) + " returned " + score);
                 return score;
             }
             else
@@ -28,7 +25,6 @@ namespace Tennis.Domain
                 s = Player1.Score > Player2.Score ? Player1.Name : Player2.Name;
 
                 var score = ((Player1.Score - Player2.Score) * (Player1.Score - Player2.Score) == 1) ? "Advantage " + s : "Win for " + s;
-                Console.WriteLine(nameof(GetScore) + " returned " + score);
                 return score;
             }
         }
