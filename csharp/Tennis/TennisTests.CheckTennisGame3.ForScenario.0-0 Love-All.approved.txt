@@ -1,3 +1,4 @@
-﻿p1N equals player1
-p2N equals player2
+﻿New TennisGame3
+Player1Name equals player1
+Player2Name equals player2
 GetScore returned Love-All

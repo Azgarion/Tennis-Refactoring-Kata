@@ -2,77 +2,73 @@ using System;
 
 namespace Tennis.Domain
 {
-    public class TennisGame1 : ITennisGame
+    public class TennisGame1 : TennisGameAbstract
     {
-        private int m_score1 = 0;
-        private int m_score2 = 0;
-        private string player1Name;
-        private string player2Name;
+        private int _mScore1;
+        private int _mScore2;
 
         public TennisGame1(string player1Name, string player2Name)
+            : base(player1Name, player2Name)
         {
-            Console.WriteLine($"New {nameof(TennisGame1)} with {player1Name} & {player2Name}");
-
-            this.player1Name = player1Name;
-            Console.WriteLine($"New {nameof(this.player1Name)} equals {player1Name}");
-
-            this.player2Name = player2Name;
-            Console.WriteLine($"New {nameof(this.player2Name)} equals {player2Name}");
         }
 
-        public void WonPoint(string playerName)
+        public override void WonPoint(string playerName)
         {
             if (playerName == "player1")
             {
-                m_score1 += 1;
+                _mScore1 += 1;
                 Console.WriteLine($"{nameof(playerName)} is {playerName}, " +
-                                  $"{nameof(m_score1)} incremented to {m_score1}");
+                                  $"{nameof(_mScore1)} incremented to {_mScore1}");
             }
             else
             {
-                m_score2 += 1;
+                _mScore2 += 1;
                 Console.WriteLine($"{nameof(playerName)} is not player1, " +
-                                  $"{nameof(m_score2)} incremented to {m_score2}");
+                                  $"{nameof(_mScore2)} incremented to {_mScore2}");
             }
         }
 
-        public string GetScore()
+        public override string GetScore()
         {
-            string score = "";
-            var tempScore = 0;
-            if (m_score1 == m_score2)
+            var score = "";
+            if (_mScore1 == _mScore2)
             {
-                switch (m_score1)
+                score = _mScore1 switch
                 {
-                    case 0:
-                        score = "Love-All";
-                        break;
+                    0 => "Love-All",
+                    1 => "Fifteen-All",
+                    2 => "Thirty-All",
+                    _ => "Deuce"
+                };
+            }
+            else if (_mScore1 >= 4 || _mScore2 >= 4)
+            {
+                var minusResult = _mScore1 - _mScore2;
+
+                switch (minusResult)
+                {
                     case 1:
-                        score = "Fifteen-All";
+                        score = "Advantage player1";
                         break;
-                    case 2:
-                        score = "Thirty-All";
+                    case -1:
+                        score = "Advantage player2";
                         break;
                     default:
-                        score = "Deuce";
+                    {
+                        score = minusResult >= 2 
+                            ? "Win for player1" 
+                            : "Win for player2";
                         break;
-
+                    }
                 }
-            }
-            else if (m_score1 >= 4 || m_score2 >= 4)
-            {
-                var minusResult = m_score1 - m_score2;
-                if (minusResult == 1) score = "Advantage player1";
-                else if (minusResult == -1) score = "Advantage player2";
-                else if (minusResult >= 2) score = "Win for player1";
-                else score = "Win for player2";
             }
             else
             {
                 for (var i = 1; i < 3; i++)
                 {
-                    if (i == 1) tempScore = m_score1;
-                    else { score += "-"; tempScore = m_score2; }
+                    int tempScore;
+                    if (i == 1) tempScore = _mScore1;
+                    else { score += "-"; tempScore = _mScore2; }
                     switch (tempScore)
                     {
                         case 0:

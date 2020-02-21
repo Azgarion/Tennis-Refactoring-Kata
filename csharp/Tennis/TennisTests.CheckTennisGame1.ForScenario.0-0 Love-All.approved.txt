@@ -1,4 +1,4 @@
-﻿New TennisGame1 with player1 & player2
-New player1Name equals player1
-New player2Name equals player2
+﻿New TennisGame1
+Player1Name equals player1
+Player2Name equals player2
 GetScore returned Love-All

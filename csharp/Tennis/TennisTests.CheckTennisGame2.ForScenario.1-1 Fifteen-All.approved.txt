@@ -1,6 +1,7 @@
-﻿p1point equals 0
-player1Name equals player1
-player2Name equals player1
-p1point incremented
-p2point incremented
+﻿New TennisGame2
+Player1Name equals player1
+Player2Name equals player2
+_p1Point equals 0
+_p1Point incremented
+_p2Point incremented
 GetScore returned Fifteen-All

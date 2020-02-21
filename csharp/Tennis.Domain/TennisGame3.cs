@@ -2,59 +2,53 @@ using System;
 
 namespace Tennis.Domain
 {
-    public class TennisGame3 : ITennisGame
+    public class TennisGame3 : TennisGameAbstract
     {
-        private int p2;
-        private int p1;
-        private string p1N;
-        private string p2N;
+        private int _p2;
+        private int _p1;
 
         public TennisGame3(string player1Name, string player2Name)
+            : base(player1Name, player2Name)
         {
-            this.p1N = player1Name;
-            this.p2N = player2Name;
-            Console.WriteLine(nameof(this.p1N) + " equals " + this.p1N);
-            Console.WriteLine(nameof(this.p2N) + " equals " + this.p2N);
         }
 
-        public string GetScore()
+        public override string GetScore()
         {
             string s;
-            if ((p1 < 4 && p2 < 4) && (p1 + p2 < 6))
+            if ((_p1 < 4 && _p2 < 4) && (_p1 + _p2 < 6))
             {
                 string[] p = { "Love", "Fifteen", "Thirty", "Forty" };
-                s = p[p1];
+                s = p[_p1];
 
-                var score = (p1 == p2) ? s + "-All" : s + "-" + p[p2];
+                var score = (_p1 == _p2) ? s + "-All" : s + "-" + p[_p2];
                 Console.WriteLine(nameof(GetScore) + " returned " + score);
                 return score;
             }
             else
             {
-                if (p1 == p2)
+                if (_p1 == _p2)
                     return "Deuce";
-                s = p1 > p2 ? p1N : p2N;
+                s = _p1 > _p2 ? Player1Name : Player2Name;
 
-                var score = ((p1 - p2) * (p1 - p2) == 1) ? "Advantage " + s : "Win for " + s;
+                var score = ((_p1 - _p2) * (_p1 - _p2) == 1) ? "Advantage " + s : "Win for " + s;
                 Console.WriteLine(nameof(GetScore) + " returned " + score);
                 return score;
             }
         }
 
-        public void WonPoint(string playerName)
+        public override void WonPoint(string playerName)
         {
             if (playerName == "player1")
             {
-                this.p1 += 1;
-                Console.WriteLine(nameof(this.p1) + " incremented");
+                this._p1 += 1;
+                Console.WriteLine(nameof(this._p1) + " incremented");
             }
             else
             {
-                this.p2 += 1;
-                Console.WriteLine(nameof(this.p2) + " incremented");
+                this._p2 += 1;
+                Console.WriteLine(nameof(this._p2) + " incremented");
             }
         }
-
     }
 }
 

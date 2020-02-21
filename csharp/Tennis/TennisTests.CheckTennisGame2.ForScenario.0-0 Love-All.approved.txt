@@ -1,4 +1,5 @@
-﻿p1point equals 0
-player1Name equals player1
-player2Name equals player1
+﻿New TennisGame2
+Player1Name equals player1
+Player2Name equals player2
+_p1Point equals 0
 GetScore returned Love-All

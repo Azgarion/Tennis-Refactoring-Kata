@@ -1,34 +1,34 @@
-﻿New TennisGame1 with player1 & player2
-New player1Name equals player1
-New player2Name equals player2
-playerName is player1, m_score1 incremented to 1
-playerName is not player1, m_score2 incremented to 1
-playerName is player1, m_score1 incremented to 2
-playerName is not player1, m_score2 incremented to 2
-playerName is player1, m_score1 incremented to 3
-playerName is not player1, m_score2 incremented to 3
-playerName is player1, m_score1 incremented to 4
-playerName is not player1, m_score2 incremented to 4
-playerName is player1, m_score1 incremented to 5
-playerName is not player1, m_score2 incremented to 5
-playerName is player1, m_score1 incremented to 6
-playerName is not player1, m_score2 incremented to 6
-playerName is player1, m_score1 incremented to 7
-playerName is not player1, m_score2 incremented to 7
-playerName is player1, m_score1 incremented to 8
-playerName is not player1, m_score2 incremented to 8
-playerName is player1, m_score1 incremented to 9
-playerName is not player1, m_score2 incremented to 9
-playerName is player1, m_score1 incremented to 10
-playerName is not player1, m_score2 incremented to 10
-playerName is player1, m_score1 incremented to 11
-playerName is not player1, m_score2 incremented to 11
-playerName is player1, m_score1 incremented to 12
-playerName is not player1, m_score2 incremented to 12
-playerName is player1, m_score1 incremented to 13
-playerName is not player1, m_score2 incremented to 13
-playerName is player1, m_score1 incremented to 14
-playerName is not player1, m_score2 incremented to 14
-playerName is not player1, m_score2 incremented to 15
-playerName is not player1, m_score2 incremented to 16
+﻿New TennisGame1
+Player1Name equals player1
+Player2Name equals player2
+playerName is player1, _mScore1 incremented to 1
+playerName is not player1, _mScore2 incremented to 1
+playerName is player1, _mScore1 incremented to 2
+playerName is not player1, _mScore2 incremented to 2
+playerName is player1, _mScore1 incremented to 3
+playerName is not player1, _mScore2 incremented to 3
+playerName is player1, _mScore1 incremented to 4
+playerName is not player1, _mScore2 incremented to 4
+playerName is player1, _mScore1 incremented to 5
+playerName is not player1, _mScore2 incremented to 5
+playerName is player1, _mScore1 incremented to 6
+playerName is not player1, _mScore2 incremented to 6
+playerName is player1, _mScore1 incremented to 7
+playerName is not player1, _mScore2 incremented to 7
+playerName is player1, _mScore1 incremented to 8
+playerName is not player1, _mScore2 incremented to 8
+playerName is player1, _mScore1 incremented to 9
+playerName is not player1, _mScore2 incremented to 9
+playerName is player1, _mScore1 incremented to 10
+playerName is not player1, _mScore2 incremented to 10
+playerName is player1, _mScore1 incremented to 11
+playerName is not player1, _mScore2 incremented to 11
+playerName is player1, _mScore1 incremented to 12
+playerName is not player1, _mScore2 incremented to 12
+playerName is player1, _mScore1 incremented to 13
+playerName is not player1, _mScore2 incremented to 13
+playerName is player1, _mScore1 incremented to 14
+playerName is not player1, _mScore2 incremented to 14
+playerName is not player1, _mScore2 incremented to 15
+playerName is not player1, _mScore2 incremented to 16
 GetScore returned Win for player2

@@ -1,8 +1,9 @@
-﻿p1N equals player1
-p2N equals player2
-p1 incremented
-p2 incremented
-p1 incremented
-p1 incremented
-p1 incremented
+﻿New TennisGame3
+Player1Name equals player1
+Player2Name equals player2
+_p1 incremented
+_p2 incremented
+_p1 incremented
+_p1 incremented
+_p1 incremented
 GetScore returned Win for player1

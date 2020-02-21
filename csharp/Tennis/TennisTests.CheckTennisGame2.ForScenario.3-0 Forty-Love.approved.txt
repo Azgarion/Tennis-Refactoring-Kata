@@ -1,7 +1,8 @@
-﻿p1point equals 0
-player1Name equals player1
-player2Name equals player1
-p1point incremented
-p1point incremented
-p1point incremented
+﻿New TennisGame2
+Player1Name equals player1
+Player2Name equals player2
+_p1Point equals 0
+_p1Point incremented
+_p1Point incremented
+_p1Point incremented
 GetScore returned Forty-Love
