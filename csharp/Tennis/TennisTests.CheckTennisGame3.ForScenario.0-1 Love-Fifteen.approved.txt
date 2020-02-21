@@ -1,5 +1,5 @@
 ﻿New TennisGame3
 Player1Name equals player1
 Player2Name equals player2
-_p2 incremented
+Player2Score incremented
 GetScore returned Love-Fifteen

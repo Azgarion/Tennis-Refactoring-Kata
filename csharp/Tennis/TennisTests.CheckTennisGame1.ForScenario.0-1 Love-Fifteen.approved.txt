@@ -1,5 +1,5 @@
 ﻿New TennisGame1
 Player1Name equals player1
 Player2Name equals player2
-playerName is not player1, _mScore2 incremented to 1
+Player2Score incremented
 GetScore returned Love-Fifteen

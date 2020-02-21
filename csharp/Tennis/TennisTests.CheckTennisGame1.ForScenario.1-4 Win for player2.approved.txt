@@ -1,9 +1,9 @@
 ﻿New TennisGame1
 Player1Name equals player1
 Player2Name equals player2
-playerName is player1, _mScore1 incremented to 1
-playerName is not player1, _mScore2 incremented to 1
-playerName is not player1, _mScore2 incremented to 2
-playerName is not player1, _mScore2 incremented to 3
-playerName is not player1, _mScore2 incremented to 4
+Player1Score incremented
+Player2Score incremented
+Player2Score incremented
+Player2Score incremented
+Player2Score incremented
 GetScore returned Win for player2

@@ -1,15 +1,15 @@
 ﻿New TennisGame3
 Player1Name equals player1
 Player2Name equals player2
-_p1 incremented
+Player1Score incremented
 GetScore returned Fifteen-Love
-_p1 incremented
+Player1Score incremented
 GetScore returned Thirty-Love
-_p2 incremented
+Player2Score incremented
 GetScore returned Thirty-Fifteen
-_p2 incremented
+Player2Score incremented
 GetScore returned Thirty-All
-_p1 incremented
+Player1Score incremented
 GetScore returned Forty-Thirty
-_p1 incremented
+Player1Score incremented
 GetScore returned Win for player1

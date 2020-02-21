@@ -7,6 +7,9 @@ namespace Tennis.Domain
         protected readonly string Player1Name;
         protected readonly string Player2Name;
 
+        protected int Player1Score;
+        protected int Player2Score;
+
         internal TennisGameAbstract(string player1Name, string player2Name)
         {
             Console.WriteLine($"New {GetType().Name}");
@@ -18,7 +21,19 @@ namespace Tennis.Domain
             Console.WriteLine($"{nameof(Player2Name)} equals {Player2Name}");
         }
 
-        public abstract void WonPoint(string playerName);
+        public void WonPoint(string playerName)
+        {
+            if (playerName == "player1")
+            {
+                Player1Score += 1;
+                Console.WriteLine(nameof(Player1Score) + " incremented");
+            }
+            else
+            {
+                Player2Score += 1;
+                Console.WriteLine(nameof(Player2Score) + " incremented");
+            }
+        }
         public abstract string GetScore();
     }
 }

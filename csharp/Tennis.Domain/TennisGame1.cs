@@ -4,36 +4,17 @@ namespace Tennis.Domain
 {
     public class TennisGame1 : TennisGameAbstract
     {
-        private int _mScore1;
-        private int _mScore2;
-
         public TennisGame1(string player1Name, string player2Name)
             : base(player1Name, player2Name)
         {
         }
 
-        public override void WonPoint(string playerName)
-        {
-            if (playerName == "player1")
-            {
-                _mScore1 += 1;
-                Console.WriteLine($"{nameof(playerName)} is {playerName}, " +
-                                  $"{nameof(_mScore1)} incremented to {_mScore1}");
-            }
-            else
-            {
-                _mScore2 += 1;
-                Console.WriteLine($"{nameof(playerName)} is not player1, " +
-                                  $"{nameof(_mScore2)} incremented to {_mScore2}");
-            }
-        }
-
         public override string GetScore()
         {
             var score = "";
-            if (_mScore1 == _mScore2)
+            if (Player1Score == Player2Score)
             {
-                score = _mScore1 switch
+                score = Player1Score switch
                 {
                     0 => "Love-All",
                     1 => "Fifteen-All",
@@ -41,9 +22,9 @@ namespace Tennis.Domain
                     _ => "Deuce"
                 };
             }
-            else if (_mScore1 >= 4 || _mScore2 >= 4)
+            else if (Player1Score >= 4 || Player2Score >= 4)
             {
-                var minusResult = _mScore1 - _mScore2;
+                var minusResult = Player1Score - Player2Score;
 
                 switch (minusResult)
                 {
@@ -67,8 +48,8 @@ namespace Tennis.Domain
                 for (var i = 1; i < 3; i++)
                 {
                     int tempScore;
-                    if (i == 1) tempScore = _mScore1;
-                    else { score += "-"; tempScore = _mScore2; }
+                    if (i == 1) tempScore = Player1Score;
+                    else { score += "-"; tempScore = Player2Score; }
                     switch (tempScore)
                     {
                         case 0:

@@ -1,5 +1,5 @@
 ﻿New TennisGame2
 Player1Name equals player1
 Player2Name equals player2
-_p1Point equals 0
+Player1Score equals 0
 GetScore returned Love-All
