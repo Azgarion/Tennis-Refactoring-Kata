@@ -1,7 +1,6 @@
 ﻿New TennisGame2
 Player1Name equals player1
 Player2Name equals player2
-Player1Score equals 0
 Player1Score incremented
 Player2Score incremented
 Player1Score incremented

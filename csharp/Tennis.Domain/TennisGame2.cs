@@ -10,8 +10,6 @@ namespace Tennis.Domain
         public TennisGame2(string player1Name, string player2Name)
             : base(player1Name, player2Name)
         {
-            Player1Score = 0;
-            Console.WriteLine(nameof(Player1Score) + " equals " + Player1Score);
         }
 
         public override string GetScore()

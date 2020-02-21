@@ -7,8 +7,8 @@ namespace Tennis.Domain
         protected readonly string Player1Name;
         protected readonly string Player2Name;
 
-        protected int Player1Score;
-        protected int Player2Score;
+        protected int Player1Score { get; private set; }
+        protected int Player2Score { get; private set; }
 
         internal TennisGameAbstract(string player1Name, string player2Name)
         {
