@@ -10,17 +10,8 @@ namespace Tennis.Domain
         protected override string ProcessScore()
         {
             var score = "";
-            if (Player1.Score == Player2.Score)
-            {
-                score = Player1.Score switch
-                {
-                    0 => "Love-All",
-                    1 => "Fifteen-All",
-                    2 => "Thirty-All",
-                    _ => "Deuce"
-                };
-            }
-            else if (Player1.Score >= 4 || Player2.Score >= 4)
+            
+            if (Player1.Score >= 4 || Player2.Score >= 4)
             {
                 var minusResult = Player1.Score - Player2.Score;
 

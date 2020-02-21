@@ -10,9 +10,12 @@ namespace Tennis.Domain
         protected Player Player1 { get; }
         protected Player Player2 { get; }
 
-        private static readonly IEnumerable<IPossibleIssue> KnownIssues = new[]
+        private static readonly IEnumerable<IPossibleIssue> KnownIssues = new IPossibleIssue[]
         {
-            new LoveAll()
+            new LoveAll(),
+            new FifteenAll(),
+            new ThirtyAll(),
+            new Deuce()
         };
 
         internal TennisGameAbstract(string player1Name, string player2Name)
