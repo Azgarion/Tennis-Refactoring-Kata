@@ -1,0 +1,13 @@
+﻿p1N equals player1
+p2N equals player2
+p1 incremented
+p2 incremented
+p1 incremented
+p2 incremented
+p1 incremented
+p2 incremented
+p1 incremented
+p2 incremented
+p1 incremented
+p1 incremented
+GetScore returned Win for player1

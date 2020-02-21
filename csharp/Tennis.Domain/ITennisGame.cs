@@ -1,4 +1,4 @@
-namespace Tennis
+namespace Tennis.Domain
 {
     public interface ITennisGame
     {

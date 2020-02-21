@@ -1,4 +1,6 @@
-namespace Tennis
+using System;
+
+namespace Tennis.Domain
 {
     public class TennisGame2 : ITennisGame
     {
@@ -15,6 +17,10 @@ namespace Tennis
             this.player1Name = player1Name;
             p1point = 0;
             this.player2Name = player2Name;
+
+            Console.WriteLine(nameof(p1point) + " equals " + p1point);
+            Console.WriteLine(nameof(this.player1Name) + " equals " + this.player1Name);
+            Console.WriteLine(nameof(this.player2Name) + " equals " + this.player1Name);
         }
 
         public string GetScore()
@@ -101,6 +107,8 @@ namespace Tennis
             {
                 score = "Win for player2";
             }
+
+            Console.WriteLine(nameof(GetScore) + " returned " + score);
             return score;
         }
 
@@ -123,11 +131,13 @@ namespace Tennis
         private void P1Score()
         {
             p1point++;
+            Console.WriteLine(nameof(p1point) + " incremented");
         }
 
         private void P2Score()
         {
             p2point++;
+            Console.WriteLine(nameof(p2point) + " incremented");
         }
 
         public void WonPoint(string player)

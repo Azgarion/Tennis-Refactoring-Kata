@@ -1,0 +1,6 @@
+﻿p1point equals 0
+player1Name equals player1
+player2Name equals player1
+p1point incremented
+p1point incremented
+GetScore returned Thirty-Love

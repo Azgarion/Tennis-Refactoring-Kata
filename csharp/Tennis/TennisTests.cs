@@ -1,8 +1,11 @@
 using System;
+using ApprovalTests.Reporters;
 using NUnit.Framework;
+using Tennis.Domain;
 
-namespace Tennis
+namespace Tennis.Tests
 {
+    [UseReporter(typeof(DiffReporter))]
     [TestFixture( 0,  0, "Love-All")]
     [TestFixture( 1,  1, "Fifteen-All")]
     [TestFixture( 2,  2, "Thirty-All")]
@@ -42,6 +45,8 @@ namespace Tennis
         private readonly int player2Score;
         private readonly string expectedScore;
 
+        private string CurrentTestName => $"{player1Score}-{player2Score} " + expectedScore;
+
         public TennisTests(int player1Score, int player2Score, string expectedScore)
         {
             this.player1Score = player1Score;
@@ -52,22 +57,31 @@ namespace Tennis
         [Test]
         public void CheckTennisGame1()
         {
-            var game = new TennisGame1("player1", "player2");
-            CheckAllScores(game);
+            using (new GoldenMasterTest(CurrentTestName))
+            {
+                var game = new TennisGame1("player1", "player2");
+                CheckAllScores(game);
+            }
         }
 
         [Test]
         public void CheckTennisGame2()
         {
-            var game = new TennisGame2("player1", "player2");
-            CheckAllScores(game);
+            using (new GoldenMasterTest(CurrentTestName))
+            {
+                var game = new TennisGame2("player1", "player2");
+                CheckAllScores(game);
+            }
         }
 
         [Test]
         public void CheckTennisGame3()
         {
-            var game = new TennisGame3("player1", "player2");
-            CheckAllScores(game);
+            using (new GoldenMasterTest(CurrentTestName))
+            {
+                var game = new TennisGame3("player1", "player2");
+                CheckAllScores(game);
+            }
         }
 
         private void CheckAllScores(ITennisGame game)
@@ -80,46 +94,9 @@ namespace Tennis
                 if (i < this.player2Score)
                     game.WonPoint("player2");
             }
+
             Assert.AreEqual(this.expectedScore, game.GetScore());
         }
-
     }
-
-    [TestFixture]
-    public class ExampleGameTennisTest
-    {
-        [Test]
-        public void CheckGame1()
-        {
-            var game = new TennisGame1("player1", "player2");
-            RealisticTennisGame(game);
-        }
-
-        [Test]
-        public void CheckGame2()
-        {
-            var game = new TennisGame2("player1", "player2");
-            RealisticTennisGame(game);
-        }
-
-        [Test]
-        public void CheckGame3()
-        {
-            var game = new TennisGame3("player1", "player2");
-            RealisticTennisGame(game);
-        }
-
-        private void RealisticTennisGame(ITennisGame game)
-        {
-            string[] points = { "player1", "player1", "player2", "player2", "player1", "player1" };
-            string[] expectedScores = { "Fifteen-Love", "Thirty-Love", "Thirty-Fifteen", "Thirty-All", "Forty-Thirty", "Win for player1" };
-            for (var i = 0; i < 6; i++)
-            {
-                game.WonPoint(points[i]);
-                Assert.AreEqual(expectedScores[i], game.GetScore());
-            }
-        }
-    }
-
 }
 

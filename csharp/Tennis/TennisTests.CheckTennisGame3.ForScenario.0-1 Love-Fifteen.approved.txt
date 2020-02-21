@@ -1,0 +1,4 @@
+﻿p1N equals player1
+p2N equals player2
+p2 incremented
+GetScore returned Love-Fifteen

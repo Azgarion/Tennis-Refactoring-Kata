@@ -1,0 +1,3 @@
+﻿p1N equals player1
+p2N equals player2
+GetScore returned Love-All

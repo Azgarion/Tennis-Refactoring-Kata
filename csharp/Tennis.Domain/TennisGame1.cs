@@ -1,6 +1,8 @@
-namespace Tennis
+using System;
+
+namespace Tennis.Domain
 {
-    class TennisGame1 : ITennisGame
+    public class TennisGame1 : ITennisGame
     {
         private int m_score1 = 0;
         private int m_score2 = 0;
@@ -9,16 +11,29 @@ namespace Tennis
 
         public TennisGame1(string player1Name, string player2Name)
         {
+            Console.WriteLine($"New {nameof(TennisGame1)} with {player1Name} & {player2Name}");
+
             this.player1Name = player1Name;
+            Console.WriteLine($"New {nameof(this.player1Name)} equals {player1Name}");
+
             this.player2Name = player2Name;
+            Console.WriteLine($"New {nameof(this.player2Name)} equals {player2Name}");
         }
 
         public void WonPoint(string playerName)
         {
             if (playerName == "player1")
+            {
                 m_score1 += 1;
+                Console.WriteLine($"{nameof(playerName)} is {playerName}, " +
+                                  $"{nameof(m_score1)} incremented to {m_score1}");
+            }
             else
+            {
                 m_score2 += 1;
+                Console.WriteLine($"{nameof(playerName)} is not player1, " +
+                                  $"{nameof(m_score2)} incremented to {m_score2}");
+            }
         }
 
         public string GetScore()
@@ -75,6 +90,8 @@ namespace Tennis
                     }
                 }
             }
+
+            Console.WriteLine(nameof(GetScore) + " returned " + score);
             return score;
         }
     }

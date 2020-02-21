@@ -1,0 +1,14 @@
+﻿p1N equals player1
+p2N equals player2
+p1 incremented
+GetScore returned Fifteen-Love
+p1 incremented
+GetScore returned Thirty-Love
+p2 incremented
+GetScore returned Thirty-Fifteen
+p2 incremented
+GetScore returned Thirty-All
+p1 incremented
+GetScore returned Forty-Thirty
+p1 incremented
+GetScore returned Win for player1
