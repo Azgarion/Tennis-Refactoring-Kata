@@ -1,8 +1,10 @@
 using System;
+using ApprovalTests.Reporters;
 using NUnit.Framework;
 
 namespace Tennis
 {
+    [UseReporter(typeof(DiffReporter))]
     [TestFixture( 0,  0, "Love-All")]
     [TestFixture( 1,  1, "Fifteen-All")]
     [TestFixture( 2,  2, "Thirty-All")]
@@ -38,75 +40,96 @@ namespace Tennis
     [TestFixture(14, 16, "Win for player2")]
     public class TennisTests
     {
-        private readonly int player1Score;
-        private readonly int player2Score;
-        private readonly string expectedScore;
+        private readonly int _player1Score;
+        private readonly int _player2Score;
+        private readonly string _expectedScore;
+
+        private string CurrentTestName => $"{_player1Score}-{_player2Score} " + _expectedScore;
 
         public TennisTests(int player1Score, int player2Score, string expectedScore)
         {
-            this.player1Score = player1Score;
-            this.player2Score = player2Score;
-            this.expectedScore = expectedScore;
+            this._player1Score = player1Score;
+            this._player2Score = player2Score;
+            this._expectedScore = expectedScore;
         }
 
         [Test]
         public void CheckTennisGame1()
         {
-            var game = new TennisGame1("player1", "player2");
-            CheckAllScores(game);
+            using (new GoldenMaster(CurrentTestName))
+            {
+                var game = new TennisGame1("player1", "player2");
+                CheckAllScores(game);
+            }
         }
 
         [Test]
         public void CheckTennisGame2()
         {
-            var game = new TennisGame2("player1", "player2");
-            CheckAllScores(game);
+            using (new GoldenMaster(CurrentTestName))
+            {
+                var game = new TennisGame2("player1", "player2");
+                CheckAllScores(game);
+            }
         }
 
         [Test]
         public void CheckTennisGame3()
         {
-            var game = new TennisGame3("player1", "player2");
-            CheckAllScores(game);
+            using (new GoldenMaster(CurrentTestName))
+            {
+                var game = new TennisGame3("player1", "player2");
+                CheckAllScores(game);
+            }
         }
 
         private void CheckAllScores(ITennisGame game)
         {
-            var highestScore = Math.Max(this.player1Score, this.player2Score);
+            var highestScore = Math.Max(this._player1Score, this._player2Score);
             for (var i = 0; i < highestScore; i++)
             {
-                if (i < this.player1Score)
+                if (i < this._player1Score)
                     game.WonPoint("player1");
-                if (i < this.player2Score)
+                if (i < this._player2Score)
                     game.WonPoint("player2");
             }
-            Assert.AreEqual(this.expectedScore, game.GetScore());
+            Assert.AreEqual(this._expectedScore, game.GetScore());
         }
 
     }
 
+    [UseReporter(typeof(DiffReporter))]
     [TestFixture]
     public class ExampleGameTennisTest
     {
         [Test]
         public void CheckGame1()
         {
-            var game = new TennisGame1("player1", "player2");
-            RealisticTennisGame(game);
+            using (new GoldenMaster())
+            {
+                var game = new TennisGame1("player1", "player2");
+                RealisticTennisGame(game);
+            }
         }
 
         [Test]
         public void CheckGame2()
         {
-            var game = new TennisGame2("player1", "player2");
-            RealisticTennisGame(game);
+            using (new GoldenMaster())
+            {
+                var game = new TennisGame2("player1", "player2");
+                RealisticTennisGame(game);
+            }
         }
 
         [Test]
         public void CheckGame3()
         {
-            var game = new TennisGame3("player1", "player2");
-            RealisticTennisGame(game);
+            using (new GoldenMaster())
+            {
+                var game = new TennisGame3("player1", "player2");
+                RealisticTennisGame(game);
+            }
         }
 
         private void RealisticTennisGame(ITennisGame game)
