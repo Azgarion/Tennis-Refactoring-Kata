@@ -1,3 +1,5 @@
+using System;
+
 namespace Tennis
 {
     class TennisGame1 : ITennisGame
@@ -16,9 +18,15 @@ namespace Tennis
         public void WonPoint(string playerName)
         {
             if (playerName == "player1")
+            {
                 m_score1 += 1;
+                Console.WriteLine(playerName + " won point. Increment score. Score :" + m_score1);
+            }
             else
+            {
                 m_score2 += 1;
+                Console.WriteLine(playerName + " won point. Increment score. Score :" + m_score2);
+            }
         }
 
         public string GetScore()
@@ -75,6 +83,7 @@ namespace Tennis
                     }
                 }
             }
+            Console.WriteLine(score);
             return score;
         }
     }

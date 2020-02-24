@@ -1,6 +1,8 @@
 using System;
 using ApprovalTests.Reporters;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
+using Assert = NUnit.Framework.Assert;
 
 namespace Tennis
 {
@@ -53,6 +55,7 @@ namespace Tennis
             this._expectedScore = expectedScore;
         }
 
+        
         [Test]
         public void CheckTennisGame1()
         {
@@ -143,6 +146,64 @@ namespace Tennis
             }
         }
     }
+
+//    [TestClass]
+//    public class TennisMsTest
+//    {
+//        [TestMethod]
+//        public void Score_0_to_0_ShouldEqual_LoveAll()
+//        {
+//            
+//        }
+//        
+//        [TestMethod]
+//        public void Score_1_to_1_ShouldEqual_FifteenAll()
+//        {
+//            
+//        }
+//        
+//        [TestMethod]
+//        public void Score_2_to_2_ShouldEqual_ThirtyAll()
+//        {
+//            
+//        }
+//        
+//        [TestMethod]
+//        public void Score_3_to_3_ShouldEqual_Deuce()
+//        {
+//            
+//        }
+//        
+//        [TestMethod]
+//        public void Score_4_to_4_ShouldEqual_Deuce()
+//        {
+//            
+//        }
+//
+//        [TestMethod]
+//        public void Score_5_To_4_ShouldEqual_AdvantagePlayer1()
+//        {
+//            
+//        }
+//        
+//        [TestMethod]
+//        public void Score_4_To_5_ShouldEqual_AdvantagePlayer2()
+//        {
+//            
+//        }
+//        
+//        [TestMethod]
+//        public void Score__To__ShouldEqual_WinPlayer1()
+//        {
+//            
+//        }
+//        
+//        
+//        
+//        
+//        
+//        
+//    }
 
 }
 

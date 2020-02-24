@@ -1,1 +1,3 @@
-﻿
+﻿player1 won point. Increment score. Score :1
+player2 won point. Increment score. Score :1
+Fifteen-All
