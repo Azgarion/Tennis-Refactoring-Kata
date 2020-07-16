@@ -1,2 +1,2 @@
-﻿player1 won point. Increment score. Score :1
+﻿player1 won point. Increment score. Score : Fifteen
 Fifteen-Love

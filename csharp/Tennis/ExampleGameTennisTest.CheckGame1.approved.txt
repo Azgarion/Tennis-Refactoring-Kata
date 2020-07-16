@@ -1,12 +1,12 @@
-﻿player1 won point. Increment score. Score :1
+﻿player1 won point. Increment score. Score : Fifteen
 Fifteen-Love
-player1 won point. Increment score. Score :2
+player1 won point. Increment score. Score : Thirty
 Thirty-Love
-player2 won point. Increment score. Score :1
+player2 won point. Increment score. Score : Fifteen
 Thirty-Fifteen
-player2 won point. Increment score. Score :2
+player2 won point. Increment score. Score : Thirty
 Thirty-All
-player1 won point. Increment score. Score :3
+player1 won point. Increment score. Score : Forty
 Forty-Thirty
-player1 won point. Increment score. Score :4
+player1 won point and so is victorious.
 Win for player1

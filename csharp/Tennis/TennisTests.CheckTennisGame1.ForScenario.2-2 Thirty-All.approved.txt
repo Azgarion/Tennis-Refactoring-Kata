@@ -1,5 +1,5 @@
-﻿player1 won point. Increment score. Score :1
-player2 won point. Increment score. Score :1
-player1 won point. Increment score. Score :2
-player2 won point. Increment score. Score :2
+﻿player1 won point. Increment score. Score : Fifteen
+player2 won point. Increment score. Score : Fifteen
+player1 won point. Increment score. Score : Thirty
+player2 won point. Increment score. Score : Thirty
 Thirty-All

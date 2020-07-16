@@ -1,5 +1,5 @@
-﻿player1 won point. Increment score. Score :1
-player1 won point. Increment score. Score :2
-player1 won point. Increment score. Score :3
-player1 won point. Increment score. Score :4
+﻿player1 won point. Increment score. Score : Fifteen
+player1 won point. Increment score. Score : Thirty
+player1 won point. Increment score. Score : Forty
+player1 won point and so is victorious.
 Win for player1
